@@ -35,14 +35,14 @@ public class ProcessDevice : Element
 
     public override void PrintResult()
     {
-        Console.WriteLine(Name + " quantity = " + Quantity +
+        Console.WriteLine(Name + " Quantity = " + Quantity +
             " Mean Load = " + _meanLoad / Tcurr);
     }
     public override void PrintInfo()
     {
-        Console.WriteLine(Name + " state = " + State +
-        " quantity = " + Quantity +
-        " tnext = " + Tnext);
+        Console.WriteLine(Name + " State = " + State +
+        " Quantity = " + Quantity +
+        " Tnext = " + Tnext);
     }
     public override void DoStatistics(double delta)
     {

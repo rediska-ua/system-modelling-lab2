@@ -48,7 +48,6 @@ public class Model
             {
                 if (el.Tnext == _tcurr)
                 {
-                    Console.WriteLine("here");
                     el.OutAct();
                 }
             }
@@ -73,9 +72,9 @@ public class Model
             e.PrintResult();
             if (e is Process) {
                 Process p = (Process)e;
-                Console.WriteLine("mean length of queue = " +
+                Console.WriteLine("Mean length of queue = " +
                 p.GetMeanQueue() / _tcurr
-                + "\nfailure probability = " +
+                + "\nFailure probability = " +
                 p.Failure / (double)p.Quantity);
             }
         }

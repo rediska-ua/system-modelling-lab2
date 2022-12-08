@@ -26,7 +26,7 @@ public class Process : Element
             {
                 Console.WriteLine(device.Name + " started working ");
                 device.InAct();
-                Console.WriteLine($" Tnext device  = {device.Tnext}");
+                Console.WriteLine($" Tnext of {device.Name}  = {device.Tnext}");
                 if (device.Tnext < Tnext) Tnext = device.Tnext;
                 return;
             }

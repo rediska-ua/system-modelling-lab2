@@ -37,7 +37,7 @@ public class Element
     }
     public Element(string nameOfElement, double delay) : this(delay)
     {
-        _name = nameOfElement + ", id: " + _id;
+        _name = nameOfElement;
     }
 
     public double DelayDev
@@ -129,7 +129,7 @@ public class Element
 
             if (randNum < sum)
             {
-                Console.WriteLine($"{elem.Item1.Name} called from random choice");
+                Console.WriteLine($"{elem.Item1.Name} called from next element function");
                 elem.Item1.InAct();
                 return;
             }    
@@ -138,13 +138,13 @@ public class Element
 
     public virtual void PrintResult()
     {
-        Console.WriteLine(Name + " quantity = " + _quantity);
+        Console.WriteLine(Name + " Quantity = " + _quantity);
     }
     public virtual void PrintInfo()
     {
-        Console.WriteLine(Name + " state = " + _state +
-        " quantity = " + _quantity +
-        " tnext = " + _tnext);
+        Console.WriteLine(Name + " State = " + _state +
+        " Quantity = " + _quantity +
+        " Tnext = " + _tnext);
     }
     public virtual void DoStatistics(double delta)
     {

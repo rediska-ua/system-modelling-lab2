@@ -8,23 +8,24 @@ class SimModel
 {
     public static void Main(string[] args)
     {
-        Create creator = new Create("Create", 3);
-        Process process_1 = new Process("Process1", 6);
-        Process process_2 = new Process("Process2", 4);
-        Process process_3 = new Process("Process3", 6);
+        Create creator = new Create("Create", 2);
+        Process process_1 = new Process("Process1", 10);
+        Process process_2 = new Process("Process2", 8);
+        Process process_3 = new Process("Process3", 9);
         Dispose dispose = new Dispose("Dispose");
 
         List<ProcessDevice> p1Devices = new List<ProcessDevice>()
         {
-            new ProcessDevice("PROCESS_1_DEVICE_1", 4, process_1)
+            new ProcessDevice("Process1_Device1", 3, process_1)
         };
         List<ProcessDevice> p2Devices = new List<ProcessDevice>()
         {
-            new ProcessDevice("PROCESS_2_DEVICE_1", 6, process_2)
+            new ProcessDevice("Process2_Device1", 5, process_2),
+            new ProcessDevice("Process2_Device2", 3, process_2)
         };
         List<ProcessDevice> p3Devices = new List<ProcessDevice>()
         {
-            new ProcessDevice("PROCESS_3_DEVICE_1", 3, process_3)
+            new ProcessDevice("Process3_Device1", 3, process_3)
         };
 
         process_1.processDevices = p1Devices;
@@ -46,6 +47,6 @@ class SimModel
 
         List<Element> list = new List<Element>() { creator, process_1, process_2, process_3, dispose };
         Model model = new Model(list);
-        model.Simulate(1000);
+        model.Simulate(2000);
     }
 }
